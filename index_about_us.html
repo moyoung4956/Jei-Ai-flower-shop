@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About us</title>
+  <link rel="stylesheet" href="css/index_about_us.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <script src="https://kit.fontawesome.com/be5a7edbfa.js" crossorigin="anonymous"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <style>
+    
+  </style> 
+
+</head>
+
+<body>
+  <!-- nav -->
+  <nav class="navbar navbar-expand-lg bg-light navbar-light fixed-top">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/logo.png" alt="logo" style="width: 120px;">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      Menu
+      <i class="fas fa-align-justify"></i>
+    </button>
+
+    <div class="collapse navbar-collapse mx-auto" id="collapsibleNavbar">
+
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item mr-2 p-2 pr-2 pl-3 ">
+          <a class="nav-link disabled" href="index_about_us.html" target="_parent">關於我們</a>
+        </li>
+        <li class="nav-item mr-2 p-2 pr-2 pl-3 ">
+          <a class="nav-link" href="index_product.html" target="_parent">桔薆選品</a>
+        </li>
+        <li class="nav-item mr-2 p-2 pr-2 pl-3 ">
+          <a class="nav-link" href="index_floriography.html" target="_parent">花言花語</a>
+        </li>
+        <li class="nav-item mr-2 p-2 pr-2 pl-3 ">
+          <a class="nav-link" href="index_wedding.html" target="_parent">百花盛婚</a>
+        </li>
+        <li class="nav-item p-2 pr-2 pl-3">
+          <a class="nav-link" href="index_contact_us.html" target="_parent">聯絡我們</a>
+        </li>
+      </ul>
+
+      <!-- 未處理:漢堡式選單 -->
+      <nav class="ml-auto p-3">
+        <a class="mr-3" href="#">
+          <img src="img/icon-shop.png" alt="shop">
+        </a>
+        <a class="mr-3" href="#">
+          <img src="img/icon-member.png" alt="member" id="loginIcon">
+        </a>
+
+      </nav>
+
+    </div>
+
+  </nav>
+
+  <div class="modal fade" id="loginModal" style="margin-top: 4.5rem;">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content bg-modal">
+
+        <div class="modal-header bg-modal-header">
+          <h4 class="modal-title">登入</h4>
+          <button type="button"
+                  class="close"
+                  data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="userNameTextBox" class="input-font">帳號：</label>
+              <input type="text" 
+                     class=" form-control form-control-md" 
+                     id="userNameTextBox"
+                     placeholder="輸入帳號或信箱" required>
+            </div>
+
+            <div class="form-group mt-2">
+              <label for="userPswTextBox"class="input-font">密碼：</label>
+              <input type="password"
+                     class="form-control"
+                     id="userPswTextBox"
+                     placeholder="輸入密碼" required>
+            </div>
+
+            <div>
+              <button type="button"
+                      id="loginButton"
+                      class="btn btn-outline-sub mr-2">登入
+              </button>
+              <button type="button"
+                      id="cancelButton"
+                      class="btn btn-outline-sub"
+                      data-dismiss="modal">取消
+              </button>
+              <button type="button"
+                      id="signUpButton"
+                      class="btn btn-outline-sub float-right">註冊
+              </button>                    
+            </div>
+
+            <p class="text-center or">or</p>
+            
+            <div class="connect">
+              <a href="" class="facebook">
+                <i class="fab fa-facebook-f fa-lg"></i>
+              </a>
+
+              <a href="" class="googlePlus">
+                <i class="fab fa-google-plus-g fa-lg"></i>
+              </a>
+              </div>
+
+      
+          </div>
+
+          <div class="col-6">
+            <img src="img/flower_img/loginImg1.jpg" alt="login img" style="width: 100%; border-radius: 3rem;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <!-- 背景還沒用 -->
+
+  <div class="row mb-5 pb-5">
+    <img src="img/flower_img/about-us-background.jpg" alt="background" class="bg-img col-12">
+    <div class="col-12 text-center">
+      <h3 class="content-title">花，記錄著人生的篇章</h3>
+      <div class="content-text">
+        <p>呱呱落地時，歡喜拎著雛菊小花籃，迎接你的到來</p>
+        <p>情竇初開時，悄悄遞上一朵嬌羞的玫瑰，表露喜歡</p>
+        <p>鳳凰花開時，手拿一束向日葵，盼你前程似錦</p>
+        <p>教堂鐘響時，手捧999朵玫瑰，永不相負</p>
+        <p>桔薆願能與你一起寫下每個時刻</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <img class="col-12 col-lg-6 mr-5 mb-4 ml-3" src="img/flower_img/shop.jpg" alt="flower shop" style="width: 30%;height: 30%;">
+    <div class="col-12 col-lg-4 ml-3">
+      <div class="my-auto mt-3">
+        <div class="mx-auto" style="width: 26rem;">
+          <p class="secTitle mt-5 my-3 mx-auto">「花，見證我們幸福及愛」</p>
+          <p class="textBlock mt-4 mx-auto">桔薆一路秉持著對花藝的熱誠，同時，也追情創新的突破，並提供客製化高品質的服務。桔薆傳承了桔梗之永恆的愛及薆的茂盛壯大。</p>
+        </div>      
+      </div>
+      
+    </div>
+  </div>
+
+ <div class="row mb-5">
+   <div class="col-12 col-md-4">
+     <img src="img/icon@2x.png" alt="icon" class="d-block mx-auto mt-5">
+     <p class="secTitle mt-3 ditributeAlign ml-auto mr-auto" style="width: 12rem;">優良服務</p>
+     <p class="textBlock text-center px-4 mx-5 mx-auto" style="width: 20rem;">創立以來，一路堅持給顧客最好的服務及高品質的花禮。</p>
+   </div>
+   <div class="col-12 col-md-4">
+    <img src="img/icon@2x.png" alt="icon" class="d-block mx-auto mt-5">
+    <p class="secTitle mt-3 ditributeAlign ml-auto mr-auto" style="width: 12rem;">精心設計</p>
+    <p class="textBlock text-center px-4 mx-5 mx-auto" style="width: 20rem;">桔薆的精心設計，使收禮者備感窩心，送禮者深深暖心。</p>
+   </div>
+   <div class="col-12 col-md-4">
+    <img src="img/icon@2x.png" alt="icon" class="d-block mx-auto mt-5">
+    <p class="secTitle mt-3 ditributeAlign ml-auto mr-auto" style="width: 12rem;">傳統創新</p>
+    <p class="textBlock text-center px-4 mx-5 mx-auto" style="width: 20rem;">傳承古老花藝的精神及理念，結合現代創新，打造花盛世。</p>
+   </div>
+ </div>
+
+<div class=" mt-5 pt-4 div-hr"></div>
+
+ <div class="row m-block">
+  <div class="col-12 col-lg-5 ml-3">
+    <div class="my-auto mt-3">
+      <div class="mx-auto" style="width: 26rem;">
+        <p class="secTitle mt-5 my-3 mx-1">「桔薆團隊用心出發」</p>
+        <p class="textBlock mt-4 mx-1">桔薆團隊由小小工作室，慢慢茁壯至今，一路堅持用「心」照料每朵花，並要求良性溝通及討論，給予客人最好的服務及高品質的花禮。</p>
+      </div>      
+    </div>
+  </div>
+  <img class="col-12 col-lg-6 mx-3" src="img/flower_img/team.jpg" alt="flower shop" style="width: 30%;height: 30%;">
+</div> 
+ 
+<!-- footer -->
+<footer class="bg-main text-white footer-font">
+  <div class="row text-center pt-3 mx-auto" style="height: 15rem;">
+    <div class="col-12 col-md-6 pt-4" >
+      <p class="">台中市太平區中興路650號</p>
+      <p class="">TEL: 04-22735186 FAX: 04-22735186</p>
+      <p class="">EMAIL: service@jieai.com.tw</p>
+    </div>
+    <div class="col-12 col-md-6 pt-2">
+      <a href="https://www.facebook.com/" target="_blank"><img src="img/fb-icon.png" alt="fb" style="width: 4rem;" class="mx-2"></a>
+      <a href="https://line.me/zh-hant/" target="_blank"><img src="img/line-icon.png" alt="line" style="width: 4rem;" class="mx-2"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="img/ig-icon.png" alt="ig" style="width: 4rem;" class="mx-2"></a>
+    </div>
+    <div class="col-12">
+      <hr class="footer-hr">
+      <p>Copyright © 2020 JeiAi.com. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  $("#loginIcon").click(function () {
+    $("#loginModal").modal({backdrop: "static"});
+  })
+
+  $("#loginIcon").click(function () {
+  $("#loginModal").modal("hide");})
+</script>
+</body>
+
+</html>

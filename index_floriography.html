@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floriography</title>
+  <link rel="stylesheet" href="css/index_about_us.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <script src="https://kit.fontawesome.com/be5a7edbfa.js" crossorigin="anonymous"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <style>
+    .floImg{
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+    }
+    .floTitle{
+      font-size: 1.8rem;
+      padding-top: 0.5rem;
+      color: rgb(91, 91, 91);
+      font-weight: bold;
+    }
+    .floTitle:hover{
+      color: rgb(70, 70, 70);
+      font-size: 1.76rem;
+    }
+
+    .floSubTitle{
+      font-size: 1.4rem;
+      margin-top: 1rem;
+      margin-bottom: 0;
+      color: rgb(91, 91, 91);
+      font-weight: bold;
+    }
+
+    .floText{
+      margin-top: 0.2rem;
+      color: rgb(157, 151, 139);
+      font-size: 1.2rem;
+    }
+
+    .collect{
+      color: rgb(91, 91, 91);
+      border: 2px solid rgb(191, 73, 95);
+      padding: 0.25rem 0.5rem;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+    .collect:hover{
+      color: white;
+      background-color: rgb(191, 73, 95);
+    }
+    .goDetail{
+      color: rgb(191, 73, 95);
+      font-weight: 600;
+    }
+    .goDetail:hover{
+      border-bottom: 1px dotted rgb(191, 73, 95);
+    }
+
+    #categoriesMenu{
+      list-style: none;
+      font-size: 1.3rem;
+
+    }
+    #categoriesMenu a{
+      color: rgb(157, 151, 139);
+      border-bottom: 1px solid rgb(210, 210, 210);
+      display: block;
+      padding: 1rem 0 1rem 0.5rem;
+      border-radius: 1rem;
+      height: 4rem;
+    }
+
+    #categoriesMenu a:hover{
+      color: rgb(91, 91, 91);
+      background-color: rgb(210, 210, 210,0.25);
+    }
+    .listTitle{
+      color: rgb(91, 91, 91);
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin: 1.6rem 0;
+    }
+
+    #featuredMenu{
+      margin-top: 3rem;
+      list-style: none;
+
+    }
+    #featuredMenu li{
+    margin-bottom: 1rem;
+  }
+    .featuredImg{
+      width: 5.5rem;
+      height: 7.5rem;
+      display: inline-block;
+    }
+    .featuredTitle{
+      font-size: 1.2rem;
+      display: block;
+      margin-top: 1.2rem;
+    }
+    .featuredTitle:hover{
+      font-size: 1.22rem;
+      color: rgb(70, 70, 70);
+    }
+    .featuredText{
+      margin-top: 0.8rem;
+    }
+
+  </style> 
+
+</head>
+
+<body>
+  <!-- nav -->
+  <nav class="navbar navbar-expand-lg bg-light navbar-light fixed-top">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/logo.png" alt="logo" style="width: 120px;">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      Menu
+      <i class="fas fa-align-justify"></i>
+    </button>
+
+    <div class="collapse navbar-collapse mx-auto" id="collapsibleNavbar">
+
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item mr-2 p-2 pr-2 pl-3 ">
+          <a class="nav-link" href="index_about_us.html" target="_parent">關於我們</a>
+        </li>
+        <li class="nav-item mr-2 p-2 pr-2 pl-3 ">
+          <a class="nav-link" href="index_product.html" target="_parent">桔薆選品</a>
+        </li>
+        <li class="nav-item mr-2 p-2 pr-2 pl-3 ">
+          <a class="nav-link disabled" href="index_floriography.html" target="_parent">花言花語</a>
+        </li>
+        <li class="nav-item mr-2 p-2 pr-2 pl-3 ">
+          <a class="nav-link" href="index_wedding.html" target="_parent">百花盛婚</a>
+        </li>
+        <li class="nav-item p-2 pr-2 pl-3">
+          <a class="nav-link" href="index_contact_us.html" target="_parent">聯絡我們</a>
+        </li>
+      </ul>
+
+      <!-- 未處理:漢堡式選單 -->
+      <nav class="ml-auto p-3">
+        <a class="mr-3" href="#">
+          <img src="img/icon-shop.png" alt="shop">
+        </a>
+        <a class="mr-3" href="#">
+          <img src="img/icon-member.png" alt="member" id="loginIcon">
+        </a>
+
+      </nav>
+
+    </div>
+
+  </nav>
+
+
+  <div class="modal fade" id="loginModal" style="margin-top: 4.5rem;">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content bg-modal">
+
+        <div class="modal-header bg-modal-header">
+          <h4 class="modal-title">登入</h4>
+          <button type="button"
+                  class="close"
+                  data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="userNameTextBox" class="input-font">帳號：</label>
+              <input type="text" 
+                     class=" form-control form-control-md" 
+                     id="userNameTextBox"
+                     placeholder="輸入帳號或信箱" required>
+            </div>
+
+            <div class="form-group mt-2">
+              <label for="userPswTextBox"class="input-font">密碼：</label>
+              <input type="password"
+                     class="form-control"
+                     id="userPswTextBox"
+                     placeholder="輸入密碼" required>
+            </div>
+
+            <div>
+              <button type="button"
+                      id="loginButton"
+                      class="btn btn-outline-sub mr-2">登入
+              </button>
+              <button type="button"
+                      id="cancelButton"
+                      class="btn btn-outline-sub"
+                      data-dismiss="modal">取消
+              </button>
+              <button type="button"
+                      id="signUpButton"
+                      class="btn btn-outline-sub float-right">註冊
+              </button>                    
+            </div>
+
+            <p class="text-center or">or</p>
+            
+            <div class="connect">
+              <a href="" class="facebook">
+                <i class="fab fa-facebook-f fa-lg"></i>
+              </a>
+
+              <a href="" class="googlePlus">
+                <i class="fab fa-google-plus-g fa-lg"></i>
+              </a>
+              </div>
+
+      
+          </div>
+
+          <div class="col-6">
+            <img src="img/flower_img/loginImg1.jpg" alt="login img" style="width: 100%; border-radius: 3rem;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- imgbar -->
+<div class="start-margin"></div>
+<img src="img/flower_img/floriography-bar1.jpg" alt="" style="width: 100%;">
+ 
+ 
+<div class="row mt-5">
+  <!-- floriography-content -->
+  <div class="col-md-8 col-lg-9 row">
+    <div class="col-1"></div>
+    <div class="col-1"></div>
+    <div class="col-10">
+      <div class="pb-5">
+        <img src="img/flower_img/sunflower2.jpg" alt="sun flower" class="floImg img-fluid">
+        <a href="" class="floTitle">向日葵</a>
+        <p class="floSubTitle">信念、光輝、高傲、忠誠、愛慕</p>
+        <p class="floText">向日葵代表的是沉默的愛，也隱喻著勇敢無畏懼地追情自己的幸福及夢想。你是我心之所向，我心的方向就是你。</p>
+        <a href="" class="goDetail">深入探索 ></a>
+        <div class="mt-5 pb-5">
+            <a href="" class="collect float-right">收藏花語</a>
+        </div>  
+      </div>
+
+      <div class="pb-5">
+        <img src="img/flower_img/white rose.jpg" alt="sun flower" class="floImg img-fluid">
+        <a href="" class="floTitle">白玫瑰</a>
+        <p class="floSubTitle">信念、光輝、高傲、忠誠、愛慕</p>
+        <p class="floText">向日葵代表的是沉默的愛，也隱喻著勇敢無畏懼地追情自己的幸福及夢想。你是我心之所向，我心的方向就是你。</p>
+        <a href="" class="goDetail">深入探索 ></a>
+        <div class="mt-5 pb-5">
+            <a href="" class="collect float-right">收藏花語</a>
+        </div>  
+      </div>
+
+      <div class="pb-5">
+        <img src="img/flower_img/Gypsophila.jpg" alt="sun flower" class="floImg img-fluid">
+        <a href="" class="floTitle">滿天星</a>
+        <p class="floSubTitle">信念、光輝、高傲、忠誠、愛慕</p>
+        <p class="floText">向日葵代表的是沉默的愛，也隱喻著勇敢無畏懼地追情自己的幸福及夢想。你是我心之所向，我心的方向就是你。</p>
+        <a href="" class="goDetail">深入探索 ></a>
+        <div class="mt-5 pb-5">
+            <a href="" class="collect float-right">收藏花語</a>
+        </div>  
+      </div>
+
+      <div class="pb-5">
+        <img src="img/flower_img/tulip1.jpg" alt="sun flower" class="floImg img-fluid">
+        <a href="" class="floTitle">鬱金香</a>
+        <p class="floSubTitle">信念、光輝、高傲、忠誠、愛慕</p>
+        <p class="floText">向日葵代表的是沉默的愛，也隱喻著勇敢無畏懼地追情自己的幸福及夢想。你是我心之所向，我心的方向就是你。</p>
+        <a href="" class="goDetail">深入探索 ></a>
+        <div class="mt-5 pb-5">
+            <a href="" class="collect float-right">收藏花語</a>
+        </div>  
+      </div>
+
+      <div class="pb-5">
+        <img src="img/flower_img/lavender.jpg" alt="sun flower" class="floImg img-fluid">
+        <a href="" class="floTitle">薰衣草</a>
+        <p class="floSubTitle">信念、光輝、高傲、忠誠、愛慕</p>
+        <p class="floText">向日葵代表的是沉默的愛，也隱喻著勇敢無畏懼地追情自己的幸福及夢想。你是我心之所向，我心的方向就是你。</p>
+        <a href="" class="goDetail">深入探索 ></a>
+        <div class="mt-5 pb-5">
+            <a href="" class="collect float-right">收藏花語</a>
+        </div>  
+      </div>
+
+      <ul class="pagination mx-auto">
+        <li class="page-item"><a class="page-link mr-5" href="#">上一頁</a></li>
+        <li class="page-item page-link page-disabled mr-2">1</li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link ml-5" href="#">下一頁</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  
+  <!--aside menu -->
+  <div class="col-md-4 col-lg-3">
+    <ul id="categoriesMenu">
+      <li class="listTitle">季節分類</li>
+      <li><a href="">春花（3-5月）</a></li>
+      <li><a href="">夏花（6-8月）</a></li>
+      <li><a href="">秋花（9-11月）</a></li>
+      <li><a href="">冬花（12-2月）</a></li>
+    </ul>
+
+    <ul id="featuredMenu">
+
+      <li class="listTitle">精選花禮</li>
+      <li>
+        <div class="row">
+          <div class="col-5">
+            <a href=""><img src="img/flower_img/CB-1.jpg" alt="sunflower" class="featuredImg"></a>
+          </div>
+          <div class="col-7">
+            <a href="" class="featuredTitle">溫暖小陽光</a>
+            <p class="featuredText">NT$550</p>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <div class="col-5">
+            <a href=""><img src="img/flower_img/CB-2.jpg" alt="sunflower" class="featuredImg"></a>
+          </div>
+          <div class="col-7">
+            <a href="" class="featuredTitle">小婦人的玫瑰</a>
+            <p class="featuredText">NT$990</p>
+          </div>
+        </div>      
+      </li>
+
+      <li>
+        <div class="row">
+          <div class="col-5">
+            <a href=""><img src="img/flower_img/CB-3.jpg" alt="sunflower" class="featuredImg"></a>
+          </div>
+          <div class="col-7">
+            <a href="" class="featuredTitle">鬱金挪威森林</a>
+            <p class="featuredText">NT$790</p>
+          </div>
+        </div>      
+      </li>
+
+      <li>
+        <div class="row">
+          <div class="col-5">
+            <a href=""><img src="img/flower_img/CB-4.jpg" alt="sunflower" class="featuredImg"></a>
+          </div>
+          <div class="col-7">
+            <a href="" class="featuredTitle">白雪的祝福</a>
+            <p class="featuredText">NT$1290</p>
+          </div>
+        </div>
+              
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+
+<!-- footer -->
+<footer class="bg-main text-white footer-font">
+  <div class="row text-center pt-3 mx-auto" style="height: 15rem;">
+    <div class="col-12 col-md-6 pt-4" >
+      <p class="">台中市太平區中興路650號</p>
+      <p class="">TEL: 04-22735186 FAX: 04-22735186</p>
+      <p class="">EMAIL: service@jieai.com.tw</p>
+    </div>
+    <div class="col-12 col-md-6 pt-2">
+      <a href="https://www.facebook.com/" target="_blank"><img src="img/fb-icon.png" alt="fb" style="width: 4rem;" class="mx-2"></a>
+      <a href="https://line.me/zh-hant/" target="_blank"><img src="img/line-icon.png" alt="line" style="width: 4rem;" class="mx-2"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="img/ig-icon.png" alt="ig" style="width: 4rem;" class="mx-2"></a>
+    </div>
+    <div class="col-12">
+      <hr class="footer-hr">
+      <p>Copyright © 2020 JeiAi.com. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  $("#loginIcon").click(function () {
+    $("#loginModal").modal({backdrop: "static"});
+  })
+
+  $("#loginIcon").click(function () {
+  $("#loginModal").modal("hide");})
+</script>
+</body>
+
+</html>

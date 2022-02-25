@@ -1,0 +1,27 @@
+.bg-img{
+    padding: 2rem 0 1rem 0;
+    width: 100%;
+    height: auto;
+  }
+
+.content-text{
+    color: rgb(157, 151, 139);
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 3.2rem;
+}
+
+.content-title{
+    color: rgb(91, 91, 91 );
+    font-weight: 600;
+    line-height: 3.2rem;
+}
+
+.div-hr{
+    margin: 0 auto;
+    box-sizing: content-box;
+    width: 90%;
+    height: 0;
+    overflow: visible;
+    border-bottom:0.5rem dotted rgb(224, 204, 216,0.5);
+}

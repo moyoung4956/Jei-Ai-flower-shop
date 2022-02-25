@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About us</title>
+  <link rel="stylesheet" href="css/index_about_us.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <script src="https://kit.fontawesome.com/be5a7edbfa.js" crossorigin="anonymous"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <style>
+    body{
+      background-image: url("img/flower_img/wed-bg.jpg");
+      background-position: center;
+      background-repeat: repeat;
+      background-size: cover;
+    }
+    .sub-bg{
+      width: 77rem;
+      background-color: rgb(220,220,220,0.85);
+      margin: 8rem auto 3rem auto;
+    }
+    .wed-img{
+      width: 22rem;
+      height: 14rem;
+      display: block;
+      margin: 0 auto ;
+      border-radius: 0.7rem 0.7rem 5rem 0;
+    }
+    .imgBar{
+      width: 22rem;
+      height: 17.5rem;
+      background-color: rgb(191, 73, 95);
+      margin: 0 auto;
+      border-radius:0.7rem;
+    }
+
+  .title{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: rgb(91, 91, 91);
+  }
+
+  .lastImgBar{
+      width: 28rem;
+      height: 17.5rem;
+      background-color: rgb(191, 73, 95);
+      margin: 0 auto;
+      border-radius:0.7rem;
+  }
+
+  .imgTitle{
+    text-align: center;
+    color: white;
+    font-size: 1.4rem;
+    margin-top: 0.8rem;
+  }
+
+  .imgTitle:hover{
+    font-size: 1.45rem;
+  }
+  </style> 
+
+</head>
+
+<body>
+  <!-- nav -->
+  <nav class="navbar navbar-expand-lg bg-light navbar-light fixed-top">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/logo.png" alt="logo" style="width: 120px;">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      Menu
+      <i class="fas fa-align-justify"></i>
+    </button>
+
+    <div class="collapse navbar-collapse mx-auto" id="collapsibleNavbar">
+
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item mr-2 p-2 pr-2 pl-3 ">
+          <a class="nav-link" href="index_about_us.html" target="_parent">關於我們</a>
+        </li>
+        <li class="nav-item mr-2 p-2 pr-2 pl-3 ">
+          <a class="nav-link" href="index_product.html" target="_parent">桔薆選品</a>
+        </li>
+        <li class="nav-item mr-2 p-2 pr-2 pl-3 ">
+          <a class="nav-link" href="index_floriography.html" target="_parent">花言花語</a>
+        </li>
+        <li class="nav-item mr-2 p-2 pr-2 pl-3 ">
+          <a class="nav-link disabled" href="index_wedding.html" target="_parent">百花盛婚</a>
+        </li>
+        <li class="nav-item p-2 pr-2 pl-3">
+          <a class="nav-link" href="index_contact_us.html" target="_parent">聯絡我們</a>
+        </li>
+      </ul>
+
+      <!-- 未處理:漢堡式選單 -->
+      <nav class="ml-auto p-3">
+        <a class="mr-3" href="#">
+          <img src="img/icon-shop.png" alt="shop">
+        </a>
+        <a class="mr-3" href="#">
+          <img src="img/icon-member.png" alt="member" id="loginIcon">
+        </a>
+
+      </nav>
+
+    </div>
+
+  </nav>
+
+  <div class="modal fade" id="loginModal" style="margin-top: 4.5rem;">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content bg-modal">
+
+        <div class="modal-header bg-modal-header">
+          <h4 class="modal-title">登入</h4>
+          <button type="button"
+                  class="close"
+                  data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="userNameTextBox" class="input-font">帳號：</label>
+              <input type="text" 
+                     class=" form-control form-control-md" 
+                     id="userNameTextBox"
+                     placeholder="輸入帳號或信箱" required>
+            </div>
+
+            <div class="form-group mt-2">
+              <label for="userPswTextBox"class="input-font">密碼：</label>
+              <input type="password"
+                     class="form-control"
+                     id="userPswTextBox"
+                     placeholder="輸入密碼" required>
+            </div>
+
+            <div>
+              <button type="button"
+                      id="loginButton"
+                      class="btn btn-outline-sub mr-2">登入
+              </button>
+              <button type="button"
+                      id="cancelButton"
+                      class="btn btn-outline-sub"
+                      data-dismiss="modal">取消
+              </button>
+              <button type="button"
+                      id="signUpButton"
+                      class="btn btn-outline-sub float-right">註冊
+              </button>                    
+            </div>
+
+            <p class="text-center or">or</p>
+            
+            <div class="connect">
+              <a href="" class="facebook">
+                <i class="fab fa-facebook-f fa-lg"></i>
+              </a>
+
+              <a href="" class="googlePlus">
+                <i class="fab fa-google-plus-g fa-lg"></i>
+              </a>
+              </div>
+
+      
+          </div>
+
+          <div class="col-6">
+            <img src="img/flower_img/loginImg1.jpg" alt="login img" style="width: 100%; border-radius: 3rem;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+
+    <div class="col-lg-1"></div>
+
+    <div class="col-12 col-md-12 col-lg-10 sub-bg">
+
+      <div class="row pt-4">
+        <div class="col-12 col-md-12 col-lg-6">
+          <div class="imgBar">
+            <a href=""><img src="img/flower_img/wed11.jpg" alt="wed image" class="wed-img"></a>
+            <a href=""><p class="imgTitle">花 圈 胸 花</p></a>
+          </div>
+        </div>
+        <div class="col-12 col-md-12 col-lg-6 pt-5 pb-2 mb-4">
+          <h1 class="firstTitle mt-1 mt-5 text-center">百花盛婚</h1>
+          <div class="titleBar mb-3 d-block mx-auto"> 
+          <p class="pt-4 title text-center">夢幻婚禮，桔薆來打造</p>
+          </div>
+        </div>  
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-md-12 col-lg-6 my-4">
+          <div class="imgBar">
+            <a href=""><img src="img/flower_img/wed5-1.jpg" alt="wed image" class="wed-img"></a>
+            <a href=""><p class="imgTitle">婚 禮 主 桌 花</p></a>
+          </div>
+        </div>
+        <div class="col-12 col-md-12 col-lg-6 my-4">
+          <div class="imgBar" style="width: 28rem;">
+            <a href=""><img src="img/flower_img/wed6.jpg" alt="wed image" class="wed-img" style="width: 28rem;"></a>
+            <a href=""><p class="imgTitle">婚 禮 佈 置</p></a>
+          </div>
+        </div>  
+      </div>
+
+
+    </div>
+
+    <div class="col-lg-1"></div>
+
+  </div>
+
+  
+
+<!-- footer -->
+<footer class="bg-main text-white footer-font">
+  <div class="row text-center pt-3 mx-auto" style="height: 15rem;">
+    <div class="col-12 col-md-6 pt-4" >
+      <p class="">台中市太平區中興路650號</p>
+      <p class="">TEL: 04-22735186 FAX: 04-22735186</p>
+      <p class="">EMAIL: service@jieai.com.tw</p>
+    </div>
+    <div class="col-12 col-md-6 pt-2">
+      <a href="https://www.facebook.com/" target="_blank"><img src="img/fb-icon.png" alt="fb" style="width: 4rem;" class="mx-2"></a>
+      <a href="https://line.me/zh-hant/" target="_blank"><img src="img/line-icon.png" alt="line" style="width: 4rem;" class="mx-2"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="img/ig-icon.png" alt="ig" style="width: 4rem;" class="mx-2"></a>
+    </div>
+    <div class="col-12">
+      <hr class="footer-hr">
+      <p>Copyright © 2020 JeiAi.com. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+<script>
+  $("#loginIcon").click(function () {
+    $("#loginModal").modal({backdrop: "static"});
+  })
+
+  $("#loginIcon").click(function () {
+  $("#loginModal").modal("hide");})
+</script>
+</body>
+
+</html>
